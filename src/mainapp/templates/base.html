@@ -1,0 +1,30 @@
+<!-- Django Part 8 Code -->
+<!-- This entire page is our template page and all other pages within this project will
+# inherit information from this page.
+# The point for HTML Template Tags is that anything between these tags may either be inherited or
+# replaced dynamically later on any other page by calling on these tags. -->
+
+
+{% load static %} <!-- Django Part 10 Code -->
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css"> <!-- Django Part 10 Code -->
+    </head>
+    <body>
+        <div class="page_container">
+            {% include "navbar.html" %} <!-- Django Part 9 Code -->
+            <header class="header-title">
+                <h1>{% block header %} {% endblock %}</h1>
+            </header>
+            {% block content %} {% endblock %}
+        </div>
+
+        {% include "footer.html" %} <!-- Django Part 9 Code -->
+    </body>
+</html>
