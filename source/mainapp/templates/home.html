@@ -1,0 +1,20 @@
+<!-- Django Part 8 Code -->
+{% extends "base.html" %}
+
+{% block title %}Hello World!{% endblock %}
+
+{% block header %}Welcome to my world, {{ user | title }}!{% endblock %}
+
+{% block content %}
+
+{% for profile in profiles %}
+    <ul>
+        {% if profile == "Nick" %}
+        <li>Hello {{ profile }}</li>
+        {% else %}
+        <li>{{ profile }}</li>
+        {% endif %}
+    </ul>
+{% endfor %}
+
+{% endblock %}
