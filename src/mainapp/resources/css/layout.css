@@ -1,0 +1,16 @@
+html {
+    background-color: black;
+}
+
+.bg_img {
+    background-color: black;
+    background-image: url('/static/images/hello_world.jpg');
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
